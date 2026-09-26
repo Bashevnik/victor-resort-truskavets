@@ -20,7 +20,7 @@
 
   /* header state (light over hero, cream when scrolled) */
   const hdr = $('#hdr');
-  const onScroll = () => { const s = window.scrollY > 40; hdr.classList.toggle('is-scrolled', s); hdr.classList.toggle('on-image', !s); };
+  const onScroll = () => { hdr.classList.toggle('is-scrolled', window.scrollY > 40); };
   onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
 
   /* Lenis */

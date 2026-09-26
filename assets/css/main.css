@@ -40,8 +40,8 @@ h1,h2,h3{font-family:var(--font-d);font-weight:700;line-height:1.04;letter-spaci
 .btn--full{width:100%}
 
 /* header */
-.hdr{position:fixed;top:0;left:0;right:0;z-index:90;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px var(--pad);transition:.4s;border-bottom:1px solid transparent}
-.hdr.is-scrolled{background:rgba(244,239,230,.85);backdrop-filter:blur(16px);border-bottom-color:var(--line);padding-top:11px;padding-bottom:11px}
+.hdr{position:fixed;top:0;left:0;right:0;z-index:90;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:12px var(--pad);transition:.4s;background:rgba(244,239,230,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.hdr.is-scrolled{background:rgba(244,239,230,.95);padding-top:9px;padding-bottom:9px}
 .hdr__logo{display:inline-flex;align-items:center}
 .brand-lockup{display:inline-flex;align-items:center;gap:11px}
 .brandmark{width:36px;height:36px;border-radius:9px;background:var(--acc);display:grid;place-items:center;flex:none;box-shadow:0 6px 16px rgba(169,129,78,.32)}
