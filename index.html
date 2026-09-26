@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/main.css?v=1">
+<link rel="stylesheet" href="assets/css/main.css?v=2">
 </head>
 <body>
 
@@ -78,11 +78,9 @@
   <section class="about" id="about">
     <span class="about__watermark" aria-hidden="true">В</span>
     <div class="about__grid">
-      <div class="about__lead">
+      <div class="about__col">
         <p class="kicker"><span class="num">01</span> Про комплекс</p>
         <h2 class="about__statement">Тиша парку, поряд — <em>нижній бювет</em>, а всередині — рівень готелю, а не санаторію.</h2>
-      </div>
-      <div class="about__side">
         <p class="about__note">«Віктор» стоїть у парковій зоні за кілька хвилин від центральної площі та бювету. Високий стандарт сервісу, харчування на замовлення та лікувальна база під одним дахом.</p>
         <ul class="about__pillars">
           <li>
@@ -99,6 +97,10 @@
           </li>
         </ul>
       </div>
+      <figure class="about__media" data-parallax>
+        <img src="assets/img/rooms/admiral.jpg" width="1200" height="800" alt="Інтер'єр номера «Віктор»" loading="lazy">
+        <span class="about__media-chip">Адміральський люкс</span>
+      </figure>
     </div>
   </section>
 
@@ -129,6 +131,10 @@
 
   <!-- ░░░ 04 · NAFTUSYA signature ░░░ -->
   <section class="naftusya">
+    <div class="naftusya__grid">
+    <figure class="naftusya__media" data-parallax>
+      <img src="assets/img/hero/333.jpg" width="1920" height="1315" alt="Курортний комплекс «Віктор» у Трускавці" loading="lazy">
+    </figure>
     <div class="naftusya__text">
       <p class="kicker kicker--light"><span class="num num--light">03</span> Чому Трускавець</p>
       <h2 class="naftusya__title">«Нафтуся» — вода, по яку<br>їдуть з усієї Європи.</h2>
@@ -138,6 +144,7 @@
         <div><b>3</b><span>міста-джерела поруч: бювети Трускавця</span></div>
         <div><b>4★</b><span>рівень готелю та сервісу</span></div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -265,6 +272,6 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-<script src="assets/js/main.js?v=1" defer></script>
+<script src="assets/js/main.js?v=2" defer></script>
 </body>
 </html>
