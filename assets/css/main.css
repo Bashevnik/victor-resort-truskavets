@@ -66,9 +66,9 @@ body.menu-open .burger span:nth-child(2){opacity:0}
 body.menu-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 /* logo slot */
 .brand-img{display:none;width:auto;object-fit:contain}
-.hdr__logo.has-logo .brand-img{display:block;height:44px;max-width:230px}
+.hdr__logo.has-logo .brand-img{display:block;height:80px;max-width:360px}
 .hdr__logo.has-logo .brand-lockup{display:none}
-.ft__logo.has-logo .brand-img{display:block;height:clamp(50px,8vw,84px);max-width:340px}
+.ft__logo.has-logo .brand-img{display:block;height:120px;max-width:460px}
 .ft__logo.has-logo .brand-lockup{display:none}
 
 .mmenu{position:fixed;inset:0;z-index:80;background:var(--bg);padding:120px var(--pad) 40px;display:flex;flex-direction:column;gap:26px;opacity:0;visibility:hidden;transform:translateY(-2%);transition:.4s var(--ease)}
