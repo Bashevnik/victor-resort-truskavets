@@ -82,13 +82,21 @@
   const map = $('.contacts__map iframe');
   if (map) { const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { map.src = map.dataset.src; io.disconnect(); } }), { rootMargin: '200px' }); io.observe(map); }
 
-  /* ---- motion ---- */
-  if (!hasGSAP || RM) return;
+  /* ---- page reveal + motion ---- */
+  const reveal = () => document.body.classList.add('ready');
+  if (!hasGSAP || RM) { reveal(); return; }
   const { gsap } = window; gsap.registerPlugin(window.ScrollTrigger);
 
-  // hero intro
-  gsap.from('.hero__inner > *', { y: 30, opacity: 0, duration: 1, ease: 'power3.out', stagger: .09, delay: .15 });
-  gsap.fromTo('.hero__media img', { scale: 1.12 }, { scale: 1, duration: 1.6, ease: 'power2.out' });
+  // pre-hide hero pieces BEFORE first paint so the page fades in with no flash
+  gsap.set('.hero__inner > *', { opacity: 0, y: 30 });
+  gsap.set('.hero__media', { opacity: 0, y: 24 });
+
+  requestAnimationFrame(() => {
+    reveal();
+    gsap.to('.hero__inner > *', { opacity: 1, y: 0, duration: 1, ease: 'power3.out', stagger: .09, delay: .12 });
+    gsap.to('.hero__media', { opacity: 1, y: 0, duration: 1.1, ease: 'power3.out', delay: .18 });
+    gsap.fromTo('.hero__media img', { scale: 1.12 }, { scale: 1, duration: 1.6, ease: 'power2.out' });
+  });
 
   $$('.svc-head, .about__lead, .about__pillars li, .room, .svc-card, .stat, .band__head, .naftusya__title, .naftusya__lead, .naftusya__stats > div, .contacts__left, .bform').forEach(el => {
     gsap.from(el, { y: 44, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%' } });
